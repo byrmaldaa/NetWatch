@@ -35,7 +35,7 @@ exit
 ## Скачивание проекта
 
 ```bash
-git clone https://github.com/USERNAME/NetWatch.git
+git clone https://github.com/byrmaldaa/NetWatch
 ```
 
 Переходим в папку:
