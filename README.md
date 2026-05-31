@@ -1,85 +1,115 @@
 # NetWatch
 
-NetWatch — простая GUI-утилита для Linux, которая помогает проверять сетевую информацию через удобный интерфейс.
+NetWatch — полезная GUI-утилита для Linux, написанная на Python.
 
-## Что умеет программа
+Программа позволяет:
 
-- показывает локальный IP;
-- показывает публичный IP;
-- выполняет ping сайта или IP;
-- делает DNS lookup домена;
-- проверяет открыт ли порт;
-- имеет кнопку выхода из программы.
+* узнавать локальный IP;
+* узнавать публичный IP;
+* выполнять ping хоста;
+* проверять DNS lookup;
+* проверять открытые порты;
+* работать через удобный графический интерфейс.
 
-## Установка зависимостей
+---
 
-Сначала заходим в root:
+# Установка
 
-```bash
+Войти в root:
+
+```bash id="n3wd0l"
 su
 ```
 
-Устанавливаем зависимости:
+Установить зависимости:
 
-```bash
+```bash id="x3m8hn"
 apt update
-apt install python3 python3-tk git iputils-ping -y
+apt install python3 python3-tk iputils-ping git -y
 ```
 
-Выходим из root:
+Выйти из root:
 
-```bash
+```bash id="n80fmx"
 exit
 ```
 
-## Скачивание проекта
+---
 
-```bash
+# Скачивание проекта
+
+```bash id="3y87i6"
 git clone https://github.com/byrmaldaa/NetWatch
 ```
 
-Переходим в папку:
+Перейти в папку проекта:
 
-```bash
+```bash id="n3cvlw"
 cd NetWatch
 ```
 
-Выдаем права на запуск:
+---
 
-```bash
-chmod +x NetWatch
+# Запуск программы
+
+Запуск GUI:
+
+```bash id="91b2jz"
+python3 netwatch_gui.py
 ```
 
-## Запуск
+---
 
-```bash
-./NetWatch
-```
+# Возможности программы
 
-## Структура проекта
+## Local IP
 
-```text
+Показывает локальный IP адрес устройства.
+
+## Public IP
+
+Показывает внешний IP адрес.
+
+## Ping Host
+
+Позволяет проверить доступность сайта или IP адреса.
+
+## DNS Lookup
+
+Показывает DNS информацию о домене.
+
+## Port Check
+
+Проверяет открыт ли указанный порт.
+
+## Exit
+
+Кнопка выхода из программы.
+
+---
+
+# Структура проекта
+
+```text id="i74x5y"
 NetWatch/
-├── NetWatch
-├── netwatch_gui.py
 ├── netwatch/
-│   ├── core.py
-│   ├── gui.py
-│   └── __init__.py
-├── tests/
-│   └── test_core.py
-└── README.md
+├── netwatch_gui.py
+├── README.md
+└── tests/
 ```
 
-## Используемые технологии
+---
 
-- Python 3
-- Tkinter
-- socket
-- subprocess
-- urllib
-- Linux ping
+# Используемые технологии
 
-## Автор
+* Python 3
+* Tkinter
+* socket
+* subprocess
+* Linux network utilities
 
-Учебный проект Linux GUI utility.
+---
+
+# Автор
+
+Никита Лазарец 
